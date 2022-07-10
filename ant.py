@@ -29,8 +29,7 @@ class Ant:
         self.eval_bound = self._make_njitted_function(boundary_function)
 
         print('Hi! My name is Bill, and I am a clueless ant is search for food!')
-        print(
-            f'In my search for food, I will start from ({self.x0}, {self.y0})')
+        print(f'In my search for food, I will start from ({self.x0}, {self.y0})')
         print('Please wait while I calculate all the transition points that I can visit (even I should not be aware of them xD)')
         self.points = self._create_admissible_points()
         print('Ok, I am ready to go!')
@@ -217,7 +216,7 @@ class Ant:
             float: probability
         """
         # base cases
-        if (t == 0) and (p == (0, 0)):
+        if (t == 0) and (p == (self.x0, self.y0)):
             return 1
         if t == 0:
             return 0
